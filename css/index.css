@@ -1,0 +1,599 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    height: 100%;
+}
+
+.bird-container {
+    width: 100%;
+    max-width: 1155px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.title-section-container {
+    width: 100%;
+    max-height: min-content;
+    position: relative;
+}
+
+.title-section-container > .title-text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.bird > img {
+    width: 100%;
+    height: min-content;
+}
+
+.bird { 
+    position: absolute;
+}
+
+.sidebyside-flex {
+    grid-row: 1 / -1;
+    grid-column: 1 / 20;
+    height: 100%;
+    max-width: 100%;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.row-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebyside-flex > .scene-container {
+    position: relative;
+}
+
+.splashtext {
+    Font-Family: 'Merriweather', Serif;
+    Font-Size: 46px;
+    font-style: italic;
+    margin: 0;
+    width: 100%;
+}
+
+.scene-text {
+    Font-Family: 'Muli', Sans-Serif;
+    Font-Size: 16px;
+    position: relative;
+    grid-row: 1 / -1;
+    grid-column: 20 / -1;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.scene-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    /*min-width: 900px;*/
+    min-height: 794px;
+    max-height: fit-content;
+    max-height: -moz-fit-content;
+    height: auto;
+    overflow: hidden;
+}
+
+.detail-text {
+    width: 100%;
+    font-size: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: 1s all ease;
+}
+.fade-in.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.parallax-scene {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    max-width: fit-content;
+    max-width: -moz-max-content;
+    max-height: fit-content;
+    max-height: -moz-max-content;
+    position: absolute;
+}
+
+.parallax-scene-container {
+    position: relative;
+
+    width: 100%;
+    display: inline-block;
+}
+
+.p_layer {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.p_layer > img {
+    max-width: 100%;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.overlay_container {
+	position: relative;
+	display: block;
+}
+
+#heron-container {
+    grid-row: 2;
+    grid-column: 4;
+}
+
+.overlay_content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay_content > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.scene {
+    display: grid;
+    grid-template-columns: repeat(24, minmax(16px, 1fr));
+    grid-template-rows: repeat(12, minmax(16px, 1fr));
+    width: 100%;
+}
+
+.scene.sceneflip > .sidebyside-flex{
+    grid-row: 1 / -1;
+    grid-column: -1 / 5;
+    height: 100%;
+    width: 100%;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.scene.sceneflip > .scene-text{
+    grid-row: 1 / -1;
+    grid-column: 1 / 8;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.clouds {
+    position: absolute;
+    width: 100vw;
+    height: 2432px;
+}
+.clouds > img {
+    max-height: 2432px;
+    height: auto;
+    min-width: 100vw;
+}
+
+#circle-animation { 
+    width: 500px;
+}
+
+#heron-container > img {
+    position: absolute;
+}
+
+#animation2 { 
+    grid-row: 4/-1;
+    grid-column: 1/15;
+    left: 0px;
+}
+
+#animation1 {
+    transform: scaleX(-1)
+}
+
+#animation3 {
+    transform: scaleX(-1)
+}
+
+#scene1 {
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+#scene2 {
+    /*max-height: 4502px;
+    min-height: 1500px;*/
+    padding-bottom: 100px;
+}
+#scene3 {
+    height: 100%;
+}
+
+#scene1 > .scene-container {
+    max-width: 918px;
+    max-height: 795px;
+}
+
+#scene2-flex {
+    grid-column: 9/-1;
+}
+
+#scene2 > .scene-container {
+    max-width: 980px;
+    max-height: 1383px;
+}
+
+#parallax-scene-container-3 > .scene-container {
+    max-width: 918px;
+    max-height: 795px;
+}
+
+#parallax-scene-3 > .p_layer > img {
+    width: 100%;
+    height: auto;
+} 
+
+#parallax-scene-1 > .p_layer > img {
+    max-width: 100%;
+    max-height: auto;
+} 
+
+#introScene {
+    position: relative;
+}
+
+#parallax-scene-container-3 { 
+    max-width: 2732px;
+    max-height: 2364px;
+}
+
+#parallax-scene-2 > .p_layer > img {
+    max-width: 3189px;
+    max-height: 4502px;
+    height: auto;
+    width: 100%;
+} 
+
+#parallax-scene-container-2 { 
+    max-width: 3189px;
+    max-height: 4502px;
+}
+
+.subtitle-text {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    Font-Family: 'Muli', Sans-Serif;
+    Font-Size: 16px;
+}
+
+#animation1 {        
+    grid-row: 5;
+    grid-column: -18/-1;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) and (max-height: 900px) {
+    #introScene {
+        height: 300px;
+    }
+    .scene {
+        max-height: 1000px;
+    }
+    .bird-container {
+        height: 633px;
+    }
+    .sidebyside-flex {
+        grid-row: 1/10;
+        grid-column: 1/-1;
+    }
+    .scene-text {
+        grid-row:7/-1;
+        grid-column: 1/-1;
+        max-width: 100vw;
+    }
+    .scene-container{
+        min-height: 400px;
+        min-width: 600px;
+    }
+    #parallax-scene-container-3 {
+        max-height: 900px;
+        max-width: 600px;
+    }
+    #scene1-flex {
+        min-height: 900px;
+        height: 900px;
+        grid-row: 1/7;
+        grid-column: 1/-1;
+    }
+    #animation1 {  
+        grid-row: 6;
+        grid-column: 1/-1;
+    }
+} 
+
+@media only screen and (min-width: 1000px) {
+    .bird-container {
+        height: 2867px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    #scene1-flex { 
+        grid-column: 1/19;
+    }
+    #scene2-flex {
+        grid-column: 9/-1;
+     }
+    #animation1 { 
+        grid-row: 5/8;
+        grid-column: 13/-1;
+    }
+    #animation2 {
+        grid-row: 3/-1;
+        grid-column: 1/15;
+    }
+    #animation3 {
+        grid-row: 7/-1;
+        grid-column: 15/-1;
+    }
+    #scene3 {
+        height: 1385px;
+        grid-column: 1/19;
+    }
+}
+
+@media only screen and (max-height: 1355px) and (min-height: 800px) {
+    #scene2 {
+        min-height:1560px;
+    }
+    #scene2-flex {
+        min-height:1270px;
+        max-height:1560px;
+        max-width:1100px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-height: 1080px) {
+    .detail-text {
+        font-size: 1.5em;
+    }
+    .sidebyside-flex {
+        grid-column: 1/19;
+    }
+    .bird-container {
+        height: 2432px;
+    }
+    #scene2 > .scene-text {
+        max-height: 1560px;
+    }
+    #scene1 {
+        height: 976px;
+    }
+    #animation1 {
+        grid-row: 7/-1;
+        grid-column: -14/-1;
+    }
+    #animation2 { 
+        grid-row: 4/-1;
+    }
+    #animation3 { 
+        grid-row: 8/-1;
+        grid-column: -14/-1;
+    }
+    #scene3 { 
+        height: 925px;
+    }
+    #parallax-scene-container-3 { 
+        height: 976px;
+    }
+}
+
+@media only screen and (max-width: 1440px) and (max-height: 815px) {
+    .clouds {
+        height: 2432px;
+    }
+    .bird-container {
+        height: 2432px;
+    }
+    .overlay_container { 
+        width: 600px;
+        height: 300px;
+    }
+    #scene1, #scene3 { 
+        height: 887px;
+    }
+    #parallax-scene-container-3, #scene1-flex, #scene3 {
+        height: 887px;
+        width: 1300px;
+    }
+    #scene1-text { 
+        max-height: 887px;
+        padding-top: 67px;
+    }
+    .scene-text {
+        font-size: 10px;
+        grid-row: 1/8;
+    }
+    #animation1, #animation3 {
+        grid-row: 8;
+        grid-column: 14/-1;
+    }
+    #animation2 {
+        grid-row: 5/-1;
+        width: 900px;
+        height: 800px;
+    }
+    #scene2-flex {
+        max-height: 1270px;
+    }
+    #scene2 { 
+        height: 1270px;
+        max-height: 1270px;
+    }
+}
+
+@media only screen and (max-width: 926px) {
+    .overlay_container { 
+        width: 600px;
+        height: 300px;
+    }
+    #scene1-text { 
+        max-height: 887px;
+    }
+    #parallax-scene-container3 {
+        width: 926px;
+    }
+    .scene-container {
+        min-width: 0px;
+        min-height: 0px;
+        max-height: auto;
+    }
+
+}
+
+@media only screen and (max-height: 926px) and (max-width: 450px) {
+    #introScene {
+        height: 289px;
+    }
+    #scene1-flex {
+        max-height: 333px;
+    }
+    #scene1 {
+        max-height: 1000px;
+    }
+    #scene1-text {
+        height: 420px;
+    }
+    .bird-container {
+        height: 723px;
+    }
+}
+
+@media only screen and (max-height: 896px) and (max-width: 450px){
+    .bird-container {
+        height: 699px;
+    }
+}
+
+@media only screen and (max-width: 375px) and (max-height: 812px) {
+    .bird-container {
+        max-height: 699px;
+    }
+    #parallax-scene-container-3 {
+        max-width: 375px;
+    }
+    #parallax-scene-container-1 {
+        max-width: 375px;
+    }
+    .scene-container{
+        height: auto;
+        width: 375px;
+    }
+}
+
+@media only screen and (min-width: 1920px) and (max-width: 3000px) {
+    #scene1 {
+        height: 2111px;
+    }
+    #scene3 {
+        height: 2111px;
+        grid-column: 1/19;
+    }
+}
+
+
+@media only screen and (min-width: 3440px) {
+    #scene1 {
+        width: 2111px;
+        height: 1446px;
+    }
+    #animation1, #animation3 {
+        width: 1000px;
+        height: 900px;
+        grid-row: 6;
+        grid-column: -12/-1;
+    }
+    #scene2 {
+        width: 2111px;
+        height: 1986px;
+    }
+    #scene3 {
+        width: 2111px;
+        height: 1446px;
+        grid-column: 1/19;
+    }
+}
+
+/* IPAD */
+@media only screen and (min-width: 810px) and (max-width: 1300px) and (max-height: 1080px) {
+    .sidebyside-flex {
+        grid-row: 1/7;
+        grid-column: 1/-1;
+    }
+    .scene-text {
+        font-size: 9px;
+        grid-row: 7/-1;
+        grid-column: 1/-1;
+        max-width: 100vw;
+    }
+    #animation1 {        
+        grid-row: 5;
+        grid-column: -18/-1;
+    }
+    #scene1 {
+        max-height: 1355px;
+    }
+}
